@@ -20,9 +20,12 @@ public class AudioReader extends Person {
 		
 	}
 
-	public AudioReader(long id, String firstname, String lastname, Date birthday, Date deathday) {
-		super(id, firstname, lastname, birthday, deathday);
+	public AudioReader(String firstname, String lastname, Date birthday, Date deathday) {
+		super(firstname, lastname, birthday, deathday);
 		
+	}
+	public AudioReader(String firstname, String lastname, Date birthday){
+		super(firstname, lastname, birthday);
 	}
 
 }

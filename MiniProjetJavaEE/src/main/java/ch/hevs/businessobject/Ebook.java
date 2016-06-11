@@ -14,8 +14,8 @@ public class Ebook extends Book {
 
 	
 	//Constructors
-	public Ebook(long id, String title, Date publicationDate, String isbn, String format, String permissions) {
-		super(id, title, publicationDate, isbn);
+	public Ebook(String title, Date publicationDate, String isbn, String format, String permissions) {
+		super(title, publicationDate, isbn);
 		this.format = format;
 		this.permissions = permissions;
 	}

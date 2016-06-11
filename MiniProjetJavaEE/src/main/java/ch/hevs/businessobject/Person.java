@@ -26,13 +26,19 @@ public abstract class Person {
 	private Date deathday;
 	
 	//Constructors
-	public Person(long id, String firstname, String lastname, Date birthday, Date deathday) {
+	public Person(String firstname, String lastname, Date birthday, Date deathday) {
 		super();
-		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.birthday = birthday;
 		this.deathday = deathday;
+	}
+	
+	public Person(String firstname, String lastname, Date birthday){
+		super();
+		this.firstname= firstname;
+		this.lastname=lastname;
+		this.birthday=birthday;
 	}
 	
 	public Person() {

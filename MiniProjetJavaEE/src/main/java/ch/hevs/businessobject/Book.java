@@ -40,6 +40,10 @@ public class Book {
 		this.writers = writers;
 	}
 	
+	public void addWriter(Writer writer){
+		writers.add(writer);
+	}
+	
 	@ManyToMany(cascade= CascadeType.REFRESH)//TODO Vérifier le type de cascade pour voir s'il est correspondant
 	private Set<Category> categories;
 	
@@ -51,13 +55,16 @@ public class Book {
 		
 		this.categories = categories;
 	}
+	
+	public void addCategory(Category category){
+		categories.add(category);
+	}
 
 	
 	// Constructors
 	
-	public Book(long id, String title, Date publicationDate, String isbn) {
+	public Book(String title, Date publicationDate, String isbn) {
 		super();
-		this.id = id;
 		this.title = title;
 		this.publicationDate = publicationDate;
 		this.isbn = isbn;

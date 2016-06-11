@@ -12,8 +12,8 @@ public class Writer extends Person{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Writer(long id, String firstname, String lastname, Date birthday, Date deathday) {
-		super(id, firstname, lastname, birthday, deathday);
+	public Writer(String firstname, String lastname, Date birthday, Date deathday) {
+		super(firstname, lastname, birthday, deathday);
 		// TODO Auto-generated constructor stub
 	}
 

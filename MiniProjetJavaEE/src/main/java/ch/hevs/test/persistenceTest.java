@@ -1,5 +1,6 @@
 package ch.hevs.test;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
@@ -7,6 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import org.junit.Test;
 
 import ch.hevs.businessobject.AudioBook;
 import ch.hevs.businessobject.AudioReader;
@@ -17,7 +19,11 @@ import ch.hevs.businessobject.Person;
 import ch.hevs.businessobject.Writer;
 
 public class persistenceTest {
+	@Test
 	public void test() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		Date birthDate = new Date();
+		Date deathDate = new Date();
 		EntityTransaction tx = null;
 		try {
 
@@ -26,6 +32,53 @@ public class persistenceTest {
 			EntityManager em = emf.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
+			
+			Category c1 = new Category("Science-fiction", "aventure dans un univers souvent futuriste mettant en avant les innovations technologiques");
+			Category c2 = new Category("Fantasy", "Récits se déroulant dans des univers fantastiques, souvent d'inspiration médiévales");
+			
+			String birth="02/01/1920";
+			String death="06/04/1992";
+			
+			birthDate = dateFormat.parse(birth);
+			deathDate = dateFormat.parse(death);
+			
+			Writer w1 = new Writer("Isaac","Asimov", birthDate, deathDate);
+			
+			birth="03/01/1892";
+			death="02/09/1973";
+			
+			birthDate = dateFormat.parse(birth);
+			deathDate = dateFormat.parse(death);
+			
+			Writer w2 = new Writer("John Ronald Reuel", "Tolkien", birthDate, deathDate);
+			
+			String publication = "01/01/1951";
+			Date publicationDate = dateFormat.parse(publication);
+			Book b1 = new Book("Fondation", publicationDate, "9780553900347");
+			
+			publication = "29/08/1954";
+			publicationDate = dateFormat.parse(publication);
+			Book b2 = new Book("Le Seigneur des Anneaux", publicationDate, "9788845269707");
+			
+			b1.addCategory(c1);
+			b1.addWriter(w1);
+			
+			b2.addCategory(c2);
+			b2.addWriter(w2);
+			
+			birth="01/01/1933";
+			birthDate=dateFormat.parse(birth);
+			
+			AudioReader a1= new AudioReader("Inglis", "Robert", birthDate);
+			
+			AudioBook ab1 = new AudioBook("Le Seigneur des Anneaux", publicationDate, "9788845269707");
+			ab1.
+			
+			
+			
+			
+			tx.commit();
+			
 
 	
 			/*Client c1 = new Client("Platini", "Michel", "former football player");
