@@ -72,7 +72,11 @@ public class persistenceTest {
 			AudioReader a1= new AudioReader("Inglis", "Robert", birthDate);
 			
 			AudioBook ab1 = new AudioBook("Le Seigneur des Anneaux", publicationDate, "9788845269707");
-			ab1.
+			ab1.setAudioReader(a1);
+			
+			Ebook e1 = new Ebook("Le Seigneur des Anneaux", publicationDate, "pdf", "9788845269707", "Read only");
+			
+			
 			
 			
 			

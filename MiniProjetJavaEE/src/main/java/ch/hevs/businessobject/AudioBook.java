@@ -25,6 +25,13 @@ public class AudioBook extends Book {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public void setAudioReader (AudioReader audioReader){
+		this.reader = audioReader;
+	}
+	
+	public AudioReader getAudioReader (){
+		return reader;
+	}
 
 
 }
