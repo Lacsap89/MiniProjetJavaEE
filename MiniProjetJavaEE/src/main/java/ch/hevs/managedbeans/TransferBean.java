@@ -1,4 +1,4 @@
-package ch.hevs.managedbeans;
+/*package ch.hevs.managedbeans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ import ch.hevs.libraryservice.Bank;
 /**
  * TransferBean.java
  * 
- */
+ 
 
 public class TransferBean
 {
@@ -162,4 +162,4 @@ public class TransferBean
 
 		return "showTransferResult"; //  the String value returned represents the outcome used by the navigation handler to determine what page to display next.
 	} 
-}
+}*/
