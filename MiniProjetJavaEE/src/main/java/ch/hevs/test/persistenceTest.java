@@ -28,7 +28,7 @@ public class persistenceTest {
 		try {
 
 			
-			EntityManagerFactory emf = Persistence.createEntityManagerFactory("bankPU");
+			EntityManagerFactory emf = Persistence.createEntityManagerFactory("libraryPU");
 			EntityManager em = emf.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
