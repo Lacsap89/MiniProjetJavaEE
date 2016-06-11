@@ -1,4 +1,4 @@
-package ch.hevs.bankservice;
+package ch.hevs.libraryservice;
 
 import java.util.List;
 
